@@ -66,6 +66,16 @@ p {
   color: var(--supporting-mid-tone);
 }
 
+/* Global Button Reset */
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
 /* Hero Section Styles */
 .hero {
   text-align: center;
@@ -159,6 +169,69 @@ p {
   text-shadow: 0 0 10px var(--primary-accent-2);
   letter-spacing: 5px;
   margin: 0 0 10px 0;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.projects-container a {
+  text-decoration: none;
+}
+
+.project-card {
+  background-color: transparent;
+  color: white;
+  padding: 30px 40px;
+  border: 1px solid var(--primary-accent-2);
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  font-family: 'Exo 2', sans-serif;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+  min-height: 150px;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.project-card:hover {
+  background-color: var(--primary-accent-2);
+  color: var(--primary-dark);
+  box-shadow: 0 0 15px var(--primary-accent-2);
+  transform: scale(1.05);
+}
+
+.project-card:hover .project-description {
+  color: var(--primary-dark);
+}
+
+.project-card:active {
+  transform: scale(0.98);
+}
+
+.project-title {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.project-description {
+  font-size: 1.3em;
+  font-family: 'Share Tech Mono', monospace;
+  text-align: center;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+  color: var(--sub-accent-highlight);
 }
 
 /* Media Queries for Responsiveness */
